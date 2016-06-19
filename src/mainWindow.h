@@ -7,6 +7,7 @@
 #include <Menu.h>
 #include <MenuBar.h>
 #include <MenuItem.h>
+#include <StringView.h>
 
 class mainWindow : public BWindow {
 	public:
@@ -18,7 +19,7 @@ class mainWindow : public BWindow {
 		bool AddSoundFile(BEntry *entry);
 		bool RemoveSoundFile(SoundPanel *panel);
 		void ReorderPanels();
-		
+
 	private:
 		BView	*panelView;
 		int32	iPanels;

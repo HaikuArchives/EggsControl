@@ -4,6 +4,9 @@
 #include <View.h>
 #include <String.h>
 #include <CheckBox.h>
+#include <PopUpMenu.h>
+#include <Slider.h>
+#include <Entry.h>
 #include "StopButton.h"
 #include "PauseButton.h"
 #include "PlayButton.h"
@@ -22,7 +25,7 @@ class SoundPanel : public BView {
 	public:
 		SoundPanel(BEntry *entry);
 		virtual ~SoundPanel();
-		
+
 		virtual void Draw(BRect updateRect);
 		virtual void MouseDown(BPoint point);
 		void Play();
@@ -35,10 +38,10 @@ class SoundPanel : public BView {
 		virtual void AllDetached(void);
 		void AddThread(thread_id id);
 		thread_id RemoveThread(int32 index=-1);
-		
+
 	private:
 		static int32 PlaySoundBuffer(void *data);
-		
+
 		BEntry		*kentry;
 		thread_id	thread[1024];
 //		BButton	*playB,
