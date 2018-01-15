@@ -3,9 +3,9 @@
 BPoint polygon[3]={BPoint(4,4), BPoint(4,16), BPoint(16,10)};
 
 PlayButton::PlayButton(BRect frame, const char *name, BView *owner, BMessage *message,
-		uint32 behaviour = B_ONE_STATE_BUTTON,
-		uint32 resizingMode = B_FOLLOW_LEFT | B_FOLLOW_TOP,
-		uint32 flags = B_WILL_DRAW | B_NAVIGABLE) {
+		uint32 behaviour,
+		uint32 resizingMode,
+		uint32 flags) {
 	
 	on=new BPicture(); // STOP BUTTON
 	owner->BeginPicture(on);	
